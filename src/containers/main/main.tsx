@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { fetchCity } from '../../redux/slices/citySlice';
 import { useSelector, useDispatch } from "react-redux";
+import { fetchTest } from "../../redux/slices/test";
+import { RootState, useAppDispatch } from "../../redux/store";
 
 export const Main = () => {
-    const dispatch = useDispatch();
-    const fetch = async () =>{
-        try{
-            dispatch(fetchCity())
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    const dispatch = useAppDispatch();
+    const data = useSelector( (state: RootState) => state.test.data)
+    useEffect(()=>{
+        dispatch(fetchTest())
+        console.log(data)
+    },[])
     
-  return <div>Main</div>;
+  
+
+  return <div>{/* {console.log(data)} */}</div>;
 };

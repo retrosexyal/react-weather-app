@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import city from './slices/citySlice';
+import { useDispatch } from 'react-redux';
+import test from './slices/test';
 
 export const store = configureStore( {
     reducer: {
-        city,
+        test,
     }
 })
 
+
 export type RootState = ReturnType<typeof store.getState>;
+export type AddDispatch = typeof store.dispatch;
+export const useAppDispatch = () => useDispatch<AddDispatch>();
