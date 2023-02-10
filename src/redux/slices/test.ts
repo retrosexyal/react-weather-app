@@ -1,17 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { RootState, store } from "../store";
-
-
-export const fetchTest = createAsyncThunk(
-  "city/setTest",
-  async () => {
-    const responce = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
-    );
-    return responce as IState;
-  }
-);
 
 type Data = {
   id: number;
@@ -19,18 +7,33 @@ type Data = {
 };
 interface IState {
   data: Data[];
+  name: string,
 }
 
 const initialState: IState = {
   data: [],
+  name: '',
+  
 };
+
+export const fetchTest = createAsyncThunk(
+  "test/setTest",
+  async () => {
+    const responce = await axios.get(
+      "https://api.openweathermap.org/data/2.5/weather?q=Mogilev&units=metric&appid=3f73d696c605835e25ab5d1c0cf3d788&lang=ru"
+    );
+    return responce.data as IState;
+  }
+);
+
+
 
 const test = createSlice({
   name: "test",
   initialState,
   reducers: {
     setTest(state, action: PayloadAction<IState>) {
-      state.data = action.payload.data;
+      state = action.payload;
     },
   },
   extraReducers: (builder) => {

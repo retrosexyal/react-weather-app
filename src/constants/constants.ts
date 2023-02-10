@@ -5,6 +5,7 @@ const ico = 'https://openweathermap.org/img/w/03d.png';
 // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}&lang={lang}  en English  ru Russian
 //https://api.openweathermap.org/data/2.5/weather?q=Mogilev&units=metric&appid=3f73d696c605835e25ab5d1c0cf3d788&lang=ru
 
+//api.openweathermap.org/data/2.5/forecast?q=Mogilev&units=metric&appid=3f73d696c605835e25ab5d1c0cf3d788&lang=ru
 
 //the movie db a38bda945c606d708d849e0a9d459b40
 //https://api.themoviedb.org/3/movie/550?api_key=a38bda945c606d708d849e0a9d459b40

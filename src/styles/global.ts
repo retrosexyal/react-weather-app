@@ -13,11 +13,20 @@ export const Global = createGlobalStyle`
 export const theme = {
   colors: {
     primary: "#4793FF",
-    secondary: "red",
+    secondary: "#939CB0",
+    black: "#000000",
   },
+  borderRadius: {
+    primary: "20px"
+  },
+  boxShadow: {
+    primary: "2px 5px 25px -3px rgba(180, 180, 180, 0.25)"
+  }
 };
 
 export const Wrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
 `;
