@@ -47,3 +47,13 @@ const test = createSlice({
 export const { setTest } = test.actions;
 
 export default test.reducer;
+
+
+/* builder.addCase(
+  fetchBooks.fulfilled,
+  (state, action: PayloadAction<BooksState>) => {
+    console.log(action.payload.books)
+    state.books = action.payload.books;
+    state.loading = false;
+    state.status = Status.COMLETED;
+  } */

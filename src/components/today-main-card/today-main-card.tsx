@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { StyledContainer, StyledImgWrapper, StyledTemp, StyledText, StyledTime, StyledToday, StyledWeather } from "./styled";
+import {
+  StyledContainer,
+  StyledImgWrapper,
+  StyledTemp,
+  StyledText,
+  StyledTime,
+  StyledToday,
+  StyledWeather,
+} from "./styled";
 
 type TProbs = {
   temp: number;
@@ -12,7 +20,7 @@ export const TodayMainCard: React.FC<TProbs> = ({ temp, city, ico }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDate((new Date).toLocaleTimeString().slice(0, -3));
+      setDate(new Date().toLocaleTimeString().slice(0, -3));
     }, 1000);
     return () => {
       clearInterval(interval);

@@ -2,34 +2,25 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState, store } from "../store";
 
-type TMain = {
-  feels_like: number;
-  temp: number;
-};
-
-type TWeather = {
-  description: string;
-  icon: string;
-};
-
-interface IState {
-  main: TMain;
-  name: string;
-  id: number;
-  weather: TWeather[];
-}
+import { IState } from "../../interfaces/interfaces";
 
 const initialState: IState = {
   main: {
     feels_like: 0,
     temp: 0,
+    pressure: 0,
   },
   name: "",
   id: 0,
-  weather: [{
-    description: "",
-    icon: "",
-  },]
+  wind: {
+    speed: 0,
+  },
+  weather: [
+    {
+      description: "",
+      icon: "",
+    },
+  ],
 };
 
 export const fetchCityWeather = createAsyncThunk(
@@ -59,6 +50,8 @@ const cityWeather = createSlice({
         state.name = action.payload.name;
         state.id = action.payload.id;
         state.weather = action.payload.weather;
+        state.wind = action.payload.wind;
+        state=action.payload;
       }
     );
   },

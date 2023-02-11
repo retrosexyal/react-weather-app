@@ -5,7 +5,7 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   width:400px;
   height: 300px;
-  
+  flex-shrink: 0;
   justify-content: space-between;
   padding: 20px;
   box-shadow: ${(props) => props.theme.boxShadow.primary};

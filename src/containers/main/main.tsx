@@ -8,13 +8,10 @@ import { StyledMain } from "./styled";
 
 export const Main = () => {
   const dispatch = useAppDispatch();
-  /*  const data = useSelector( (state: RootState) => state.test.data) */
   const cityWeather = useSelector((state: RootState) => state.cityWeather.main);
   const cityName = useSelector((state: RootState) => state.cityWeather.name);
   const info = useSelector((state: RootState) => state.cityWeather);
   useEffect(() => {
-    /* dispatch(fetchTest())
-        console.log(data) */
     dispatch(fetchCityWeather());
   }, []);
 

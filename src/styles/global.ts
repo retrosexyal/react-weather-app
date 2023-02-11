@@ -30,3 +30,18 @@ export const Wrapper = styled.div`
   padding-left: 50px;
   padding-right: 50px;
 `;
+
+interface StyledFlexProps {
+  justCont?: string;
+  alIt?: string;
+  fD?: string;
+  gap?: string;
+}
+
+export const StyledFlex = styled.div<StyledFlexProps>`
+display: flex;
+justify-content: ${props=>props.justCont || "center"};
+align-items: ${props=>props.alIt || "center"};
+flex-direction: ${props=>props.fD || "row"};
+gap: ${props=>props.fD || "0"};
+`
