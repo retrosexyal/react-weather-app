@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import test from './slices/test';
 import cityWeather from './slices/cityWeatherSlice'
+import themeSlice from './slices/themeSlice';
 
 export const store = configureStore( {
     reducer: {
-        test,
+        theme: themeSlice,
         cityWeather,
     }
 })

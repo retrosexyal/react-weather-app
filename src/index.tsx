@@ -10,15 +10,13 @@ import { store } from "./redux/store";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <Provider store={store}>
-        <HashRouter>
-          <Global />
-          <App />
-        </HashRouter>
-      </Provider>
-    </ThemeProvider>
+    <Provider store={store}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </Provider>
   </React.StrictMode>
 );

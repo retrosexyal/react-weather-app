@@ -12,7 +12,7 @@ export const Main = () => {
   const cityName = useSelector((state: RootState) => state.cityWeather.name);
   const info = useSelector((state: RootState) => state.cityWeather);
   useEffect(() => {
-    dispatch(fetchCityWeather());
+    dispatch(fetchCityWeather("Mogilev"));
   }, []);
 
   return (

@@ -8,13 +8,16 @@ export const StyledWeatherDetails = styled.div`
   border-radius: ${(props) => props.theme.borderRadius.primary};
   width: 100%;
   gap: 20px;
+  background: ${(props) => props.theme.colors.background};
 `;
 
 export const StyledDetailColumn = styled(StyledFlex)`
   flex-direction: column;
   align-items: start;
+  background: ${(props) => props.theme.colors.background};
   svg {
     height: 25%;
+    background: ${(props) => props.theme.colors.background};
   }
   p {
     height: 25%;
@@ -22,11 +25,13 @@ export const StyledDetailColumn = styled(StyledFlex)`
     align-items: center;
     color: ${props=>props.theme.colors.secondary};
     font-size: 14px;
+    background: ${(props) => props.theme.colors.background};
   }
   div{
     height: 25%;
     color: ${props=>props.theme.colors.black};
     display: flex;
     align-items: center;
+    background: ${(props) => props.theme.colors.background};
   }
 `;

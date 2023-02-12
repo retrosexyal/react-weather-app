@@ -25,9 +25,9 @@ const initialState: IState = {
 
 export const fetchCityWeather = createAsyncThunk(
   "CityWeather/setCityWeather",
-  async () => {
+  async (city?:string) => {
     const responce = await axios.get(
-      "https://api.openweathermap.org/data/2.5/weather?q=Mogilev&units=metric&appid=3f73d696c605835e25ab5d1c0cf3d788&lang=ru"
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=3f73d696c605835e25ab5d1c0cf3d788&lang=ru`
     );
     const data = await responce.data;
     return data as IState;

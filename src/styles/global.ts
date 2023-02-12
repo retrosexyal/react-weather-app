@@ -1,12 +1,16 @@
+import { useSelector } from "react-redux";
 import styled, { createGlobalStyle } from "styled-components";
 
-export const Global = createGlobalStyle`
+
+
+export const Global = createGlobalStyle<{bg:string}>`
    *{
        margin: 0;
        padding: 0;
        outline:0;
        box-sizing:border-box;
        font-family: 'Open Sans', sans-serif; 
+       background: ${props=>props.bg};
    }
 `;
 
@@ -15,12 +19,30 @@ export const theme = {
     primary: "#4793FF",
     secondary: "#939CB0",
     black: "#000000",
+    background: "#FFFFFF",
+    back:"#FFFFFF",
   },
   borderRadius: {
     primary: "20px"
   },
   boxShadow: {
-    primary: "2px 5px 25px -3px rgba(180, 180, 180, 0.25)"
+    primary: "2px 5px 25px -3px rgba(180, 180, 180, 0.75)"
+  }
+};
+
+export const theme2 = {
+  colors: {
+    primary: "#4793FF",
+    secondary: "#939CB0",
+    black: "#000000",
+    background: "#4F4F4F",
+    back:"#000000",
+  },
+  borderRadius: {
+    primary: "20px"
+  },
+  boxShadow: {
+    primary: "2px 5px 25px -3px rgba(120, 120, 120, 0.80)"
   }
 };
 
