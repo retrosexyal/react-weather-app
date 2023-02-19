@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
+import { ForecastContainer } from "./containers/forecast-container";
 
 import { Header } from "./containers/header";
 import { Main } from "./containers/main";
@@ -16,6 +17,7 @@ function App() {
         <Wrapper>
           <Header />
           <Main />
+          <ForecastContainer/>
         </Wrapper>
       </ThemeProvider>
     </div>

@@ -26,10 +26,13 @@ export const StyledDetailColumn = styled(StyledFlex)`
     color: ${props=>props.theme.colors.secondary};
     font-size: 14px;
     background: ${(props) => props.theme.colors.background};
+    @media (max-width:800px) {
+      display:none;
+    }
   }
   div{
     height: 25%;
-    color: ${props=>props.theme.colors.black};
+    color: ${props=>props.theme.colors.blackWhite};
     display: flex;
     align-items: center;
     background: ${(props) => props.theme.colors.background};

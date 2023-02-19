@@ -12,6 +12,9 @@ export const StyledContainer = styled.div`
   border-radius: ${(props) => props.theme.borderRadius.primary};
   background: ${(props) => props.theme.colors.background};
   user-select: none;
+  @media (max-width:860px) {
+    width: 50%;
+  }
 `;
 
 export const StyledWeather = styled.div`
@@ -19,6 +22,9 @@ export const StyledWeather = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.background};
+  @media (max-width:860px) {
+    flex-direction:column;
+  }
 `;
 
 export const StyledTime = styled.div`
@@ -43,7 +49,7 @@ background: ${(props) => props.theme.colors.background};
 `
 
 export const StyledToday = styled.p`
-color: ${(props)=> props.theme.colors.black};
+color: ${(props)=> props.theme.colors.blackWhite};
 font-size: 40px;
 background: ${(props) => props.theme.colors.background};
 `

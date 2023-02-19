@@ -21,6 +21,8 @@ export const theme = {
     black: "#000000",
     background: "#FFFFFF",
     back:"#FFFFFF",
+    blackWhite:"#000000",
+    card: "rgba(71, 147, 255, 0.2)",
   },
   borderRadius: {
     primary: "20px"
@@ -37,6 +39,8 @@ export const theme2 = {
     black: "#000000",
     background: "#4F4F4F",
     back:"#000000",
+    blackWhite:"#FFFFFF",
+    card: "#2E3035",
   },
   borderRadius: {
     primary: "20px"
@@ -58,6 +62,8 @@ interface StyledFlexProps {
   alIt?: string;
   fD?: string;
   gap?: string;
+  flexWrap?: string;
+  padding?: string;
 }
 
 export const StyledFlex = styled.div<StyledFlexProps>`
@@ -66,4 +72,6 @@ justify-content: ${props=>props.justCont || "center"};
 align-items: ${props=>props.alIt || "center"};
 flex-direction: ${props=>props.fD || "row"};
 gap: ${props=>props.fD || "0"};
+flex-wrap: ${props=>props.flexWrap || "nowrap"};
+padding: ${props=>props.padding || "0"};
 `

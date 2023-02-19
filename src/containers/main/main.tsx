@@ -5,6 +5,7 @@ import { fetchCityWeather } from "../../redux/slices/cityWeatherSlice";
 import { TodayMainCard } from "../../components/today-main-card/today-main-card";
 import { WeatherDetails } from "../../components/weather-details";
 import { StyledMain } from "./styled";
+import { ForecastContainer } from "../forecast-container";
 
 export const Main = () => {
   const dispatch = useAppDispatch();

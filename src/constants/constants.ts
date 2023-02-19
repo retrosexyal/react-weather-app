@@ -10,3 +10,7 @@ const ico = 'https://openweathermap.org/img/w/03d.png';
 //the movie db a38bda945c606d708d849e0a9d459b40
 //https://api.themoviedb.org/3/movie/550?api_key=a38bda945c606d708d849e0a9d459b40
 //eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMzhiZGE5NDVjNjA2ZDcwOGQ4NDllMGE5ZDQ1OWI0MCIsInN1YiI6IjYzZDk1NGU5YTkxMTdmMDA5ZGE0Mzg4ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hQrwUGxUhUiaqp4cOtxG9GH6xzc0kSLKtIbqdFhRwIk
+
+/* Logs:              https://app.netlify.com/sites/velvety-sprinkles-ca169f/deploys/63f1dbfdeeaea5389f8d23d9
+Unique Deploy URL: https://63f1dbfdeeaea5389f8d23d9--velvety-sprinkles-ca169f.netlify.app
+Website URL:       https://velvety-sprinkles-ca169f.netlify.app */
