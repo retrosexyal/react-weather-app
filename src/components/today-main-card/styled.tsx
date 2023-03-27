@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width:400px;
+  width: 400px;
   height: 300px;
   flex-shrink: 0;
   justify-content: space-between;
@@ -12,8 +12,11 @@ export const StyledContainer = styled.div`
   border-radius: ${(props) => props.theme.borderRadius.primary};
   background: ${(props) => props.theme.colors.background};
   user-select: none;
-  @media (max-width:860px) {
+  @media (max-width: 860px) {
     width: 50%;
+  }
+  @media (max-width: 560px) {
+    width: 90%;
   }
 `;
 
@@ -22,8 +25,8 @@ export const StyledWeather = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.background};
-  @media (max-width:860px) {
-    flex-direction:column;
+  @media (max-width: 860px) {
+    flex-direction: column;
   }
 `;
 
@@ -36,30 +39,33 @@ export const StyledTime = styled.div`
 `;
 
 export const StyledText = styled.p`
-  color: ${(props)=> props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.secondary};
   font-size: 25px;
   background: ${(props) => props.theme.colors.background};
+  @media (max-width: 860px) {
+    font-size: 15px;
+  }
 `;
 
 export const StyledTemp = styled.p`
-color: ${(props)=> props.theme.colors.primary};
-font-size: 96px;
-font-weight: 500;
-background: ${(props) => props.theme.colors.background};
-`
+  color: ${(props) => props.theme.colors.primary};
+  font-size: 96px;
+  font-weight: 500;
+  background: ${(props) => props.theme.colors.background};
+`;
 
 export const StyledToday = styled.p`
-color: ${(props)=> props.theme.colors.blackWhite};
-font-size: 40px;
-background: ${(props) => props.theme.colors.background};
-`
+  color: ${(props) => props.theme.colors.blackWhite};
+  font-size: 40px;
+  background: ${(props) => props.theme.colors.background};
+`;
 export const StyledImgWrapper = styled.div`
-flex: 1 1 120;
-height: 100%;
-background: ${(props) => props.theme.colors.background};
-img{
-  width:100%;
+  flex: 1 1 120;
   height: 100%;
   background: ${(props) => props.theme.colors.background};
-}
-`
+  img {
+    width: 100%;
+    height: 100%;
+    background: ${(props) => props.theme.colors.background};
+  }
+`;

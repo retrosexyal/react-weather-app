@@ -36,7 +36,7 @@ export const TodayMainCard: React.FC<TProbs> = ({ temp, city, ico }) => {
         <StyledImgWrapper>
           <img
             src={`https://openweathermap.org/img/w/${ico}.png`}
-            alt="weather picture"
+            alt="weather ico"
           />
         </StyledImgWrapper>
       </StyledWeather>
