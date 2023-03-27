@@ -14,7 +14,7 @@ export const StyledWeatherDetails = styled.div`
 export const StyledDetailColumn = styled(StyledFlex)`
   flex-direction: column;
   align-items: start;
-  gap: 10px;
+  gap: 11px;
   background: ${(props) => props.theme.colors.background};
   svg {
     height: 25%;
