@@ -1,3 +1,7 @@
+https://velvety-sprinkles-ca169f.netlify.app deploy
+
+perceives Russian and English
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
