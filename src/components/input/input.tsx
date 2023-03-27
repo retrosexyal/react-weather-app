@@ -7,13 +7,18 @@ import { StyledButton, StyledInput, StyledUl } from "./styled";
 export const Input: React.FC = () => {
   const [city, setCity] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCity(event.target.value);
+    const value = event.target.value;
+    const valueLastChar = value[value.length - 1];
+    if (!isNaN(+valueLastChar)) {
+      return;
+    }
+    setCity(value);
 
     const filteredSuggestions = cities.filter((city) =>
-      city.toLowerCase().startsWith(event.target.value.toLowerCase())
+      city.toLowerCase().startsWith(value.toLowerCase())
     );
 
     setSuggestions(filteredSuggestions);
@@ -24,20 +29,25 @@ export const Input: React.FC = () => {
     setSuggestions([]);
   };
   const handleCity = () => {
-    dispatch(fetchCityWeather(city))
-    setCity("")
+    dispatch(fetchCityWeather(city));
+    setCity("");
   };
-  const handleBlur =(event: React.ChangeEvent<HTMLInputElement>) => {
-    event.target.value = ""
-  }
+  const handleBlur = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.target.value = "";
+  };
 
   return (
     <StyledFlex>
       <StyledButton onClick={handleCity}>Выбрать город</StyledButton>
       <div style={{ position: "relative" }}>
-        <StyledInput type="text" value={city} onChange={handleChange} onBlur={handleBlur} />
+        <StyledInput
+          type="text"
+          value={city}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
         {city.length > 0 && (
-          <StyledUl isHidden={city === ""? "none" : "block"} >
+          <StyledUl isHidden={city === "" ? "none" : "block"}>
             {suggestions.map((suggestion) => (
               <li key={suggestion} onClick={() => handleSelect(suggestion)}>
                 {suggestion}
